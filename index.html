@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=s, initial-scale=1.0">
+    <title>Book</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="card">
+        <div class="content">
+            <h1>Harry potter</h1>
+            <p>Hai alfian disini , celup ba .... Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente illum ullam laborum, tenetur facere at ipsa. Quas rem qui, quia debitis numquam ab reprehenderit. Dignissimos iusto voluptatem quis alias eligendi!</p>
+        </div>
+        <div class="box">
+            <img src="Harry-Potter-PNG-Background.png" alt="">
+        </div>
+    </div>
+    <script>
+        let img = document.querySelector("img");
+        let src = img.src;
+        console.log(img);
+        let card = document.querySelector(".content");
+        card.addEventListener("click",function(){
+                img.src = "http://127.0.0.1:5500/her2.png"    
+        })
+       
+         
+    
+    </script>
+</body>
+</html>

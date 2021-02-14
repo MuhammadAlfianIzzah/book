@@ -1,0 +1,98 @@
+@font-face {
+  font-family: ‘Harry Potter’;
+  src: url(‘http://www.fontsaddict.com/fontface/harry-potter.TTF623’);
+}
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  transition: all 400ms ease;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: linear-gradient(
+    171.8deg,
+    rgba(5, 111, 146, 1) 13.5%,
+    rgba(6, 57, 84, 1) 78.6%
+  );
+}
+.card {
+  cursor: pointer;
+  border-radius: 5px;
+  width: 30%;
+  box-shadow: inset 400px 0 100px rgba(39, 38, 38, 0.4),
+    inset 100px 0 100px rgba(248, 248, 248, 0.4);
+  height: 37vw;
+  background-color: #ecf0f1;
+  transform-style: preserve-3d;
+  transform: perspective(2000px);
+  position: relative;
+  transition: all 2s ease;
+}
+.card::before {
+  border-radius: 5px;
+  content: "";
+  position: absolute;
+  width: 100%;
+  top: -2px;
+  height: 3px;
+  background-color: rgba(70, 60, 60, 0.4);
+  box-shadow: 0 0 2px rgba(255, 255, 255, 0.4);
+}
+.card:hover::after {
+  transform: skew(4px);
+}
+.card::after {
+  border-radius: 5px;
+  content: "";
+  position: absolute;
+  width: 4px;
+  right: -2px;
+  height: 100%;
+  box-shadow: 0 0 5px rgba(241, 239, 239, 0.4);
+  background-color: rgba(70, 60, 60, 0.4);
+}
+
+.card:hover {
+  box-shadow: inset 0px 0 20px rgba(39, 38, 38, 0.4),
+    inset 100px 0 100px rgba(39, 38, 38, 0.4);
+  transform: rotate(-5deg) perspective(2000px) scale(0.8);
+}
+.card .box {
+  border-radius: 5px;
+  background-image: radial-gradient(
+    circle farthest-corner at 10% 20%,
+    rgba(90, 92, 106, 1) 0%,
+    rgba(32, 45, 58, 1) 81.3%
+  );
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
+  transform-origin: left;
+  transition: all 2s ease;
+  box-shadow: 0 0 7px black;
+}
+.card .content {
+  z-index: -1;
+  position: absolute;
+  padding: 20px 15px;
+}
+.card .content .title {
+  font-family: "Harry Potter";
+}
+.card .content p {
+  font-family: "Poppins", sans-serif;
+  margin-top: 20px;
+}
+.card:hover .box {
+  transform: rotateY(-145deg);
+}
+.card .box img {
+  width: 100%;
+  height: 100%;
+  transition: all 400ms ease;
+}
